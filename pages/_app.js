@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
     cache: new InMemoryCache()
   })
   return (
-  <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
     <Component {...pageProps} />
     </ApolloProvider>)
 }

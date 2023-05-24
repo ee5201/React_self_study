@@ -4,7 +4,11 @@ import { CREATEBOARD, UPDATEBOARD } from "./boardwrite.queries"
 import { useMutation } from "@apollo/client"
 import { useRouter } from "next/router"
 
-export default function BoardWriterContainer (props) {
+interface IProsBoardWriterCOntainer{
+  isEdit:boolean
+  data?:String
+}
+export default function BoardWriterContainer (props:IProsBoardWriterCOntainer) {
   const [writer,setWriter] = useState("")
   const [title,settitle] = useState("")
   const [contents,setContent] = useState("")
@@ -31,7 +35,7 @@ export default function BoardWriterContainer (props) {
       }
     })
     console.log(result)
-    router.push(`/section09/09-03-boards/${result.data.createBoard.number}`)
+    router.push(`/section10/10-02-typescript-board/${result.data.createBoard.number}`)
 
 
   }
@@ -45,7 +49,7 @@ export default function BoardWriterContainer (props) {
       variables:myvariables
       
     })
-    router.push(`/section09/09-03-boards/${result.data.updateBoard.number}`)
+    router.push(`/section10/10-02-typescript-board/${result.data.updateBoard.number}`)
     
   }
 

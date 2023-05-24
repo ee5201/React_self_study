@@ -1,6 +1,6 @@
 import { gql, useMutation, useQuery } from "@apollo/client"
 import { useState } from "react"
-import BoardWriterContainer from "../../../../../src/components/units/board/09-write/boardwrite.container"
+import BoardWriterContainer from "../../../../../src/components/units/board/10-write/boardwrite.container"
 import { useRouter } from "next/router"
 
 const FetchBoard = gql`

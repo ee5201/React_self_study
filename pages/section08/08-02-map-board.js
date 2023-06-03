@@ -24,6 +24,7 @@ export default function MapBoard () {
               <input type="checkbox"/>
           </span>
           <span>{el.writer}</span>
+          <span>{el.number}</span>
         </div>
       ))}
 

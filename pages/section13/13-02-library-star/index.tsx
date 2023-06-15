@@ -18,7 +18,7 @@ export default function LibraryStarPage() {
 
     //   <Rate onChange={setValue} setvalue={value} /> //3단계
     //   {value ? <span>{desc[value - 1]}</span> : ""}
-    <Rate onChange={setValue} value={value} /> // 4단계
+    <Rate onChange={setValue} value={value} tooltips={desc} /> // 4단계
   );
 }
 // tooltips={desc} // 위에 뜨게 작성하는것

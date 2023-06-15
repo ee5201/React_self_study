@@ -5,10 +5,10 @@ module.exports = {
   },
   extends: ["standard-with-typescript", "plugin:react/recommended", "prettier"],
   parserOptions: {
-    project: "**/tsconfig.json",
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  ignorePatterns: [".eslintrc.js"],
   plugins: ["react"],
   rules: {
     "react/react-in-jsx-scope": "off",
@@ -19,5 +19,6 @@ module.exports = {
     "react/display-name": "off",
     "@typescript-eslint/restrict-plus-operands": "off",
     "@typescript-eslint/consistent-type-imports": "off",
+    "array-callback-return": "off",
   },
 };
